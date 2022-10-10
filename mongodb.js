@@ -13,6 +13,9 @@ MongoClient.connect(connectionURL, {useNewUrlParser: true}, (error, client) => {
 
     const db = client.db(databaseName)
 
+    
+    
+    
     // db.collection('users').insertOne({
     //     name: 'Rynta',
     //     age: 29
@@ -45,17 +48,17 @@ MongoClient.connect(connectionURL, {useNewUrlParser: true}, (error, client) => {
     //     console.log(result.insertedCount, result.insertedIds);
     // })
     
-    db.collection('tasks').findOne({ _id: new mongodb.ObjectId("633573a822f8de1a6c9a047b") }, (error, task) => {
-        if (error) {
-            return console.log('Unable to fetch')
-        }
-        console.log(task)
-    })
+    // db.collection('tasks').findOne({ _id: new mongodb.ObjectId("633573a822f8de1a6c9a047b") }, (error, task) => {
+    //     if (error) {
+    //         return console.log('Unable to fetch')
+    //     }
+    //     console.log(task)
+    // })
 
-    db.collection('tasks').find({ completed: false }).toArray((error, tasks) => {
-        if (error) {
-            return console.log(error);
-        }
-        console.log(tasks);
-    })
+    // db.collection('tasks').find({ completed: false }).toArray((error, tasks) => {
+    //     if (error) {
+    //         return console.log(error);
+    //     }
+    //     console.log(tasks);
+    // })
 })
